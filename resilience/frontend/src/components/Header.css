@@ -1,0 +1,164 @@
+.header {
+  background-color: var(--color-primary-dark);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  max-width: 150px;
+}
+
+.logo-img[style*="display: none"] {
+  display: none !important;
+}
+
+.logo:has(.logo-img[style*="display: none"]) .logo-text {
+  margin-left: 0;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  color: var(--color-primary-light);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  width: 200px;
+  font-size: 0.9rem;
+}
+
+.search-input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary-light);
+  background: rgba(255,255,255,0.15);
+}
+
+.btn-urgent {
+  background-color: var(--color-urgent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.btn-urgent:hover {
+  background-color: var(--color-urgent-hover);
+}
+
+/* Version mobile */
+@media (max-width: 968px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+  
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+  
+  .search-input {
+    width: 150px;
+  }
+  
+  .btn-urgent {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1rem;
+  }
+  
+  .nav {
+    gap: 1rem;
+  }
+  
+  .header-actions {
+    gap: 0.5rem;
+  }
+  
+  .search-input {
+    width: 120px;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .btn-urgent {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+

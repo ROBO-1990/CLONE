@@ -1,0 +1,33 @@
+:root {
+  /* Couleurs principales selon le CDC */
+  --color-primary-dark: #1a365d; /* Bleu foncé institutionnel */
+  --color-primary: #2c5282;
+  --color-primary-light: #4299e1;
+  
+  /* Couleurs d'urgence (orange/rouge doux) */
+  --color-urgent: #f56565; /* Rouge doux */
+  --color-urgent-hover: #e53e3e;
+  --color-warning: #ed8936; /* Orange doux */
+  
+  /* Couleurs résilience/environnement (vert) */
+  --color-resilience: #38a169; /* Vert */
+  --color-resilience-light: #68d391;
+  
+  /* Couleurs neutres */
+  --color-text: #2d3748;
+  --color-text-light: #718096;
+  --color-bg: #ffffff;
+  --color-bg-light: #f7fafc;
+  --color-border: #e2e8f0;
+  
+  /* Typographies */
+  --font-heading: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Georgia', 'Merriweather', 'Lora', serif;
+  
+  /* Espacements */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+}
